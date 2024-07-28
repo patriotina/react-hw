@@ -1,5 +1,7 @@
 import React from "react"
-import Header from "./components/header"
+import MyHeader from "./components/header"
+import Image from "./components/image"
+import logo from "./img/logo.png"
 
 class App extends React.Component {
     helpText = "Help Text"
@@ -7,11 +9,12 @@ class App extends React.Component {
     render() {
         return (
             <div className="name">
-            <Header title="some title inside"></Header>
+            <MyHeader title="some title inside"></MyHeader>
             <h1>{this.helpText}</h1>
             <input placeholder={this.helpText}
             onClick={this.inputClick} onMouseEnter={this.mouseOver} />
             <p>{this.helpText === "Help text!" ? "Yes" : "No"} </p>
+            <Image image={logo} />
             </div>
         )
     }
