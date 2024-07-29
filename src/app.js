@@ -13,6 +13,11 @@ class App extends React.Component {
         this.inputClick = this.inputClick.bind(this)
     }
 
+    componentDidUpdate(prevProp) {
+        if (this.state.helpText !== "Help")
+            console.log("Some from component update") 
+    }
+
     render() {
         return (
             <div className="name">
